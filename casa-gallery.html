@@ -4,13 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Casa Rubio Bootstrap Template</title>
+  <title>Casa Rubio Resort</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+   <link href="assets/resort-img/casa-logo.png" rel="icon">
+  <link href="assets/resort-img/casa-logo.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -56,7 +57,7 @@
     </div> -->
     <!-- End Top Bar -->
 
-    <div class="branding d-flex align-items-cente">
+      <div class="branding d-flex align-items-cente">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
@@ -66,34 +67,33 @@
         </a>
 
         <nav id="navmenu" class="navmenu">
-            <ul>
-              <li><a href="#hero" class="active">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#rooms">Rooms</a></li>
-              <li><a href="#amenities">Amenities</a></li>
-              <!-- <li><a href="#portfolio">Portfolio</a></li> -->
-              <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Dropdown 1</a></li>
-                  <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                      <li><a href="#">Deep Dropdown 1</a></li>
-                      <li><a href="#">Deep Dropdown 2</a></li>
-                      <li><a href="#">Deep Dropdown 3</a></li>
-                      <li><a href="#">Deep Dropdown 4</a></li>
-                      <li><a href="#">Deep Dropdown 5</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Dropdown 2</a></li>
-                  <li><a href="#">Dropdown 3</a></li>
-                  <li><a href="#">Dropdown 4</a></li>
-                </ul>
-              </li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-          </nav>
-
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+             <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li> -->
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
 
       </div>
 
@@ -103,212 +103,452 @@
 
   <main class="main">
 
- 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Casa Rubio Gallery</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Casa Rubio Private Resort Gallery</h2>
+    <p>Discover a collection of moments captured around Casa Rubio Private Resort, showcasing its relaxing ambiance, modern amenities, and welcoming spaces designed for comfort and leisure.</p>
+  </div>
+  <!-- End Section Title -->
 
-      <div class="container">
+  <div class="container">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+    <div class="isotope-layout"
+         data-default-filter="*"
+         data-layout="masonry"
+         data-sort="original-order">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul><!-- End Portfolio Filters -->
+      <!-- Filters -->
+      <ul class="portfolio-filters isotope-filters"
+          data-aos="fade-up"
+          data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-app">Guests</li>
+        <li data-filter=".filter-product">Amenities</li>
+        <li data-filter=".filter-branding">Facilities</li>
+        <li data-filter=".filter-toiletries">Toiletries</li>
+      </ul>
+      <!-- End Portfolio Filters -->
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+      <!-- Portfolio Items -->
+      <div class="row gy-4 isotope-container"
+           data-aos="fade-up"
+           data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-               <img src="assets/img/room/room1.png" alt="Swimming Pool">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <!-- ITEM 1 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <img src="assets/guests-img/guests1.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>App 1</h4> -->
+            <a href="assets/guests-img/guests1.jpg"
+               title="App 1"
+               data-gallery="portfolio-gallery-app"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-               <img src="assets/img/room/room1.png" alt="Swimming Pool">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <!-- ITEM 2 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <img src="assets/amenities-img/bararea3.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Product 1</h4> -->
+            <a href="assets/amenities-img/bararea3.jpg"
+               title="Product 1"
+               data-gallery="portfolio-gallery-product"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/room/room2.png" alt="Swimming Pool">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <!-- ITEM 3 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <img src="assets/img/room/room2.png" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Branding 1</h4> -->
+            <a href="assets/fac-img/sizebed.jpg"
+               title="Branding 1"
+               data-gallery="portfolio-gallery-branding"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-               <img src="assets/img/room/room2.png" alt="Swimming Pool">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+          <!-- ITEM 3 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-toiletries">
+          <img src="assets/toiletries-img/amenities1.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Toiletries 1</h4> -->
+            <a href="assets/toiletries-img/amenities1.jpg"
+               title="Toiletries 1"
+               data-gallery="portfolio-gallery-toiletries"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/room/massager.png" alt="Swimming Pool">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <!-- ITEM 4 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <img src="assets/guests-img/guests2.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>App 2</h4> -->
+            <a href="assets/guests-img/guests2.jpg"
+               title="App 2"
+               data-gallery="portfolio-gallery-app"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-            <img src="assets/img/room/massager.png" alt="Swimming Pool">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <!-- ITEM 5 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <img src="assets/amenities-img/bararea4.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Product 2</h4> -->
+            <a href="assets/amenities-img/bararea4.jpg"
+               title="Product 2"
+               data-gallery="portfolio-gallery-product"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-            <img src="assets/img/room/massager.png" alt="Swimming Pool">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <!-- ITEM 6 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <img src="assets/fac-img/billiardarea.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Branding 2</h4> -->
+            <a href="assets/fac-img/billiardarea.jpg"
+               title="Branding 2"
+               data-gallery="portfolio-gallery-branding"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-           <img src="assets/img/room/room2.png" alt="Swimming Pool">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+        
+          <!-- ITEM 3 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-toiletries">
+          <img src="assets/toiletries-img/amenities2.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Toiletries 1</h4> -->
+            <a href="assets/toiletries-img/amenities2.jpg"
+               title="Toiletries 1"
+               data-gallery="portfolio-gallery-toiletries"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                <img src="assets/img/room/room1.png" alt="Swimming Pool">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <!-- ITEM 7 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <img src="assets/guests-img/guests3.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>App 3</h4> -->
+            <a href="assets/guests-img/guests3.jpg"
+               title="App 3"
+               data-gallery="portfolio-gallery-app"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
 
-          </div><!-- End Portfolio Container -->
+        <!-- ITEM 8 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <img src="assets/img/room/massager.png" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Product 3</h4> -->
+            <a href="assets/img/room/massager.png"
+               title="Product 3"
+               data-gallery="portfolio-gallery-product"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
 
+        <!-- ITEM 9 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <img src="assets/fac-img/cr9.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Branding 3</h4> -->
+            <a href="assets/fac-img/cr9.jpg"
+               title="Branding 3"
+               data-gallery="portfolio-gallery-branding"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 10 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <img src="assets/guests-img/guests4.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>App 3</h4> -->
+            <a href="assets/guests-img/guests4.jpg"
+               title="App 3"
+               data-gallery="portfolio-gallery-app"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 11 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <img src="assets/amenities-img/biliiard2.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Product 3</h4> -->
+            <a href="assets/amenities-img/biliiard2.jpg"
+               title="Product 3"
+               data-gallery="portfolio-gallery-product"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 12 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <img src="assets/fac-img/diningarea.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Branding 3</h4> -->
+            <a href="assets/fac-img/diningarea.jpg"
+               title="Branding 3"
+               data-gallery="portfolio-gallery-branding"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+
+        
+          <!-- ITEM 3 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-toiletries">
+          <img src="assets/toiletries-img/amenities3.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Toiletries 1</h4> -->
+            <a href="assets/toiletries-img/amenities3.jpg"
+               title="Toiletries 1"
+               data-gallery="portfolio-gallery-toiletries"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 13 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <img src="assets/guests-img/guests7.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>App 4</h4> -->
+            <a href="assets/guests-img/guests7.jpg"
+               title="App 4"
+               data-gallery="portfolio-gallery-app"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 14 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <img src="assets/amenities-img/cs3.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Product 4</h4> -->
+            <a href="assets/amenities-img/cs3.jpg"
+               title="Product 4"
+               data-gallery="portfolio-gallery-product"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 15 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <img src="assets/fac-img/parkin1.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Branding 3</h4> -->
+            <a href="assets/fac-img/parkin1.jpg"
+               title="Branding 3"
+               data-gallery="portfolio-gallery-branding"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 16 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <img src="assets/guests-img/guests5.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>App 4</h4> -->
+            <a href="assets/guests-img/guest5.jpg"
+               title="App 4"
+               data-gallery="portfolio-gallery-app"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 17 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <img src="assets/amenities-img/cs19.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Product 4</h4> -->
+            <a href="assets/amenities-img/cs19.jpg"
+               title="Product 4"
+               data-gallery="portfolio-gallery-product"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 18 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <img src="assets/img/room/room1.png" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Branding 4</h4> -->
+            <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg"
+               title="Branding 2"
+               data-gallery="portfolio-gallery-branding"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 19 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <img src="assets/guests-img/guests6.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>App 5</h4> -->
+            <a href="assets/guests-img/guests6.jpg"
+               title="App 5"
+               data-gallery="portfolio-gallery-app"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 20 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <img src="assets/amenities-img/poolarea.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Product 5</h4> -->
+            <a href="assets/amenities-img/poolarea.jpg"
+               title="Product 5"
+               data-gallery="portfolio-gallery-product"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 21 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <img src="assets/fac-img/poolarea1.jpg" alt="Swimming Pool">
+          <div class="portfolio-info">
+            <!-- <h4>Branding 5</h4> -->
+            <a href="assets/fac-img/poolarea1.jpg"
+               title="Branding 5"
+               data-gallery="portfolio-gallery-branding"
+               class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+          </div>
         </div>
 
       </div>
+      <!-- End Portfolio Container -->
 
-    </section><!-- /Portfolio Section -->
+    </div>
+  </div>
+
+</section>
+<!-- /Portfolio Section -->
 
 
   </main>
 
-  <footer id="footer" class="footer light-background">
+  <footer id="footer" class="footer light-background modern-footer">
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Casa Rubio</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
+  <div class="container footer-top">
+   <div class="row gy-4">
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
+  <!-- LEFT -->
+  <div class="col-lg-4 col-md-6 footer-about">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <span class="sitename">Casa Rubio Resort</span>
+    </a>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Hic solutasetp</h4>
-          <ul>
-            <li><a href="#">Molestiae accusamus iure</a></li>
-            <li><a href="#">Excepturi dignissimos</a></li>
-            <li><a href="#">Suscipit distinctio</a></li>
-            <li><a href="#">Dilecta</a></li>
-            <li><a href="#">Sit quas consectetur</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nobis illum</h4>
-          <ul>
-            <li><a href="#">Ipsam</a></li>
-            <li><a href="#">Laudantium dolorum</a></li>
-            <li><a href="#">Dinera</a></li>
-            <li><a href="#">Trodelas</a></li>
-            <li><a href="#">Flexo</a></li>
-          </ul>
-        </div>
-
-      </div>
+    <div class="footer-contact pt-3">
+      <p>Blk 3 Lot 4 Purok 4 , Brgy.Lalakay , Los Baños, Philippines, 4030</p>
+      <p class="mt-3"><strong>Phone:</strong> <span>0939 926 2077</span></p>
+      <p><strong>Email:</strong> <span>casarubioresort@gmail.com</span></p>
     </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Casa Rubio</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
-      </div>
+    <div class="social-links d-flex mt-4">
+      <a href="https://www.facebook.com/profile.php?id=61555750682606" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/casarubio_privateresort" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://m.me/casarubio.privateresort" target="_blank"><i class="bi bi-messenger"></i></a>
+    </div>
+  </div>
+
+  <!-- MIDDLE -->
+  <div class="col-lg-5 col-md-6 footer-links">
+    <h4>Navigation</h4>
+
+    <div class="footer-nav-grid">
+      <a href="#home">Home</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#contact">Contacts</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About Us</a>
+      <a href="#gallery">Gallery</a>
     </div>
 
-  </footer>
+    <div class="mt-3">
+      <a href="#book" class="footer-book-btn">BOOK NOW</a>
+    </div>
+  </div>
 
+  <!-- RIGHT: LOGO ONLY -->
+ <div class="col-lg-3 col-md-12 d-none d-lg-flex justify-content-end align-items-center">
+  <img src="assets/resort-img/casa-logo.png" alt="Casa Rubio Logo"
+       style="max-width: 250px; height: auto;">
+</div>
+
+</div>
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Casa Rubio</strong> <span>All Rights Reserved</span></p>
+    <div class="credits">
+      Designed by Casa Rubio
+    </div>
+  </div>
+
+</footer>
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
