@@ -28,13 +28,19 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Casa Rubio
-  * Template URL: https://bootstrapmade.com/casa Rubio-one-page-bootstrap-template-free/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
+<style>
+  .nav-logo {
+  width: 100px;
+  height: 250px;
+  position: absolute;
+  bottom: -30px; /* change this value to adjust the vertical position */
+  left: 0; /* change this value to adjust the horizontal position */
+  z-index: 10; /* this ensures the logo stays on top of other elements */
+  }
+
+</style>
+
 </head>
 
 <body class="index-page">
@@ -59,12 +65,14 @@
     
     <!-- End Top Bar -->
 
-    <div class="branding d-flex align-items-cente">
+    <div class="branding d-flex align-items-center">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <!-- <img src="assets/resort-img/casa-logo.png" alt=""> -->
+           
+       <!-- <img src="assets/resort-img/casa-logo.png" alt="" class="nav-logo"> -->
           <h1 class="sitename">Casa Rubio</h1>
         </a>
 
@@ -116,7 +124,7 @@
               <div class="carousel-container text-center">
                 <h2>Welcome to Casa Rubio Resort</h2>
                 <p>Indulge in the perfect harmony of luxury and nature. Unwind in tranquil surroundings, enjoy premium amenities, and create unforgettable moments with your loved ones.</p>
-                <a href="#featured-services" class="btn-get-started">Explore the Resort</a>
+                <a href="#amenities" class="btn-get-started">Explore the Resort</a>
               </div>
             </div>
 
@@ -126,7 +134,7 @@
               <div class="carousel-container text-center">
                 <h2>Your Dream Vacation Awaits</h2>
                 <p>Step away from the ordinary and discover a haven of relaxation. Refresh in our sparkling pools, enjoy cozy accommodations, and experience service crafted for your comfort.</p>
-                <a href="#featured-services" class="btn-get-started">View Rooms</a>
+                <a href="#rooms" class="btn-get-started">View Rooms</a>
               </div>
             </div>
 
@@ -136,7 +144,7 @@
               <div class="carousel-container text-center">
                 <h2>Relax, Refresh, Rejuvenate</h2>
                 <p>Whether it’s a family retreat, romantic escape, or corporate event, Casa Rubio Private Resort provides the ideal backdrop for unforgettable experiences.</p>
-                <a href="#featured-services" class="btn-get-started">Book Now</a>
+                <a href="casa-rubio-booking.html" target="_blank" class="btn-get-started">Book Now</a>
               </div>
             </div>
             <!-- End Carousel Item -->
@@ -194,7 +202,7 @@
 
                 <!-- Buttons -->
                 <div class="mt-3">
-                  <a href="#our-story" class="btn btn-primary me-2">Book Now</a>
+                  <a href="casa-rubio-booking.html" target="_blank" class="btn btn-primary me-2">Book Now</a>
                   <a href="#rooms" class="btn btn-outline-primary">View Rooms</a>
                 </div>
               </div>
@@ -302,8 +310,8 @@
                     </div>
 
                     <div class="room-footer">
-                      <h4>$649 <small>/ night</small></h4>
-                      <a href="casa-room.html" target="_blank" class="btn-book">Reserve Suite</a>
+                      <!-- <h4>$649 <small>/ night</small></h4> -->
+                      <a href="casa-rubio-room3.html" target="_blank" class="btn-book">Book</a>
                     </div>
 
                   </div>
@@ -326,8 +334,8 @@
                     </div>
 
                     <div class="room-side-footer">
-                      <span>$269 / night</span>
-                      <a href="casa-room1.html" target="_blank" class="btn-side">Book</a>
+                      <!-- <span>$269 / night</span> -->
+                      <a href="casa-rubio-room1.html" target="_blank" class="btn-side">Book</a>
                     </div>
                   </div>
                 </div>
@@ -346,8 +354,8 @@
                     </div>
 
                     <div class="room-side-footer">
-                      <span>$329 / night</span>
-                      <a href="casa-room2.html" target="_blank" class="btn-side">Book</a>
+                      <!-- <span>$329 / night</span> -->
+                      <a href="casa-rubio-room2.html" target="_blank" class="btn-side">Book</a>
                     </div>
                   </div>
                 </div>
@@ -366,8 +374,8 @@
                     </div>
 
                     <div class="room-side-footer">
-                      <span>$419 / night</span>
-                      <a href="casa-room4.html" target="_blank" class="btn-side">Book</a>
+                      <!-- <span>$419 / night</span> -->
+                      <a href="casa-rubio-room4.html" target="_blank" class="btn-side">Book</a>
                     </div>
                   </div>
                 </div>
@@ -450,6 +458,10 @@
 
     <!-- /Room Section -->
 
+    <!-- POOL SECTION -->
+
+    <section id="pool" class="pool section">
+
             <!-- Reviews Section -->
         <section id="reviews" class="reviews section" data-aos="fade-up">
 
@@ -502,6 +514,9 @@
           
 
         </section>
+
+
+        
 
         
     
@@ -613,9 +628,77 @@
         </section>
         <!-- /Amenities Section -->
 
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-    <!-- Discover / Gallery Section -->
+
+        <!-- Pool section -->
+        <section id="pool" class="pool section py-5 bg-light">
+          <div class="container">
+            <div class="row align-items-center gy-5">
+
+             <!-- Left Column -->
+                <div class="col-lg-6 pool-content" data-aos="fade-up" data-aos-delay="100">
+
+                  <h2 class="pool-title">Refreshing Pool Experience</h2>
+
+                  <p class="pool-lead">
+                    Dive into a relaxing escape at Casa Rubio Resort, where comfort meets elegance. 
+                    Enjoy a private pool experience designed for both fun and serenity—day or night.
+                  </p>
+
+                  <!-- Features List -->
+                  <ul class="pool-features">
+                    <li><i class="bi bi-droplet-fill"></i> Luke warm water (chlorine-free)</li>
+                    <li><i class="bi bi-water"></i> 5ft adult pool</li>
+                    <li><i class="bi bi-emoji-smile"></i> 2–3ft kiddie pool</li>
+                    <li><i class="bi bi-droplet-fill"></i> Clean shower area</li>
+                    <li><i class="bi bi-moon-stars"></i> Night swimming with ambient lights</li>
+                  </ul>
+
+                  <!-- Highlight Card -->
+                  <div class="pool-highlight">
+                    <strong>Private & Relaxing</strong>
+                    <span>Perfect for family bonding, celebrations, and late-night swims.</span>
+                  </div>
+
+                  <!-- Buttons -->
+                  <div class="mt-4">
+                    <a href="casa-rubio-booking.html" target="_blank" class="btn btn-primary me-2">
+                      Book Your Stay
+                    </a>
+                    <a href="casa-gallery.html" target="_blank" class="btn btn-outline-primary">
+                      View Pool
+                    </a>
+                  </div>
+
+                </div>
+              <!-- Right Column -->
+              <div class="col-lg-6 d-flex justify-content-end" data-aos="fade-up" data-aos-delay="250">
+                <div class="img-wrapper position-relative">
+                  <img src="assets/pool/pool7.png" class="img-fluid rounded-4 shadow-lg main-img" alt="Pool Area">
+                  <img src="assets/amenities/ame-4.png" class="img-fluid rounded-4 shadow-lg overlay-img" alt="Luxury Room">
+
+                  <!-- Badge -->
+                  <!-- <div class="special-badge">
+                    <span>Special Offer</span>
+                    <strong>Save 30%</strong>
+                  </div> -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+
+         <!-- Discover / Gallery Section -->
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+   
           <section id="gallery" class="gallery section" data-aos="fade-up" data-aos-delay="100">
 
               <div class="container section-title text-center">
@@ -745,36 +828,56 @@
               </div>
             </div>
 
-            <!-- Contact Form -->
-            <div class="col-lg-6">
-              <form action="forms/contact.php" method="post" class="php-email-form">
-                
-                <div class="row gy-3">
+           <!-- Contact Form -->
+                <div class="col-lg-6">
 
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                  </div>
+                  <form action="forms/contacts.php" method="POST" class="php-email-form">
 
-                  <div class="col-md-6">
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                  </div>
+                    <div class="row gy-3">
 
-                  <div class="col-12">
-                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-                  </div>
+                      <div class="col-md-6">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                      </div>
 
-                  <div class="col-12">
-                    <textarea name="message" rows="6" class="form-control" placeholder="Message" required></textarea>
-                  </div>
+                      <div class="col-md-6">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                      </div>
 
-                  <div class="col-12 text-center">
-                    <button type="submit" class="btn-submit">Send Message</button>
-                  </div>
+                      <div class="col-12">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                      </div>
+
+                      <div class="col-12">
+                        <textarea name="message" rows="6" class="form-control" placeholder="Message" required></textarea>
+                      </div>
+
+                      <!-- reCAPTCHA -->
+                      <div class="col-12 text-center">
+                        <div class="g-recaptcha" data-sitekey="6LebvdMpAAAAAGDmClGlvv8xSJTyuYsLRejuDaeT"></div>
+                      </div>
+
+                      <!-- Status Messages -->
+                      <div class="col-12 text-center">
+                        <div class="loading" style="display:none;">Loading...</div>
+                       <div class="error-message"></div>
+
+                        <div class="sent-message" style="display:none; color: #155724; background: #d4edda; padding: 10px; border-radius: 5px;">
+                          Your message has been sent successfully. Thank you!
+                        </div>
+                      </div>
+
+                      <!-- Submit Button -->
+                      <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary btn-submit">
+                          Send Message
+                        </button>
+                      </div>
+
+                    </div>
+
+                  </form>
 
                 </div>
-
-              </form>
-            </div>
 
           </div>
 
@@ -812,17 +915,17 @@
     <h4>Navigation</h4>
 
     <div class="footer-nav-grid">
-      <a href="#home">Home</a>
-      <a href="#rooms">Rooms</a>
-      <a href="#amenities">Amenities</a>
-      <a href="#contact">Contacts</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#about">About Us</a>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#rooms">Rooms</a>
+      <a href="index.html#amenities">Amenities</a>
+      <a href="index.html#contact">Contacts</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#about">About Us</a>
       <a href="#gallery">Gallery</a>
     </div>
 
     <div class="mt-3">
-      <a href="#book" class="footer-book-btn">BOOK NOW</a>
+      <a  href="casa-rubio-booking.html" target="_blank" class="footer-book-btn">BOOK NOW</a>
     </div>
   </div>
 
@@ -861,9 +964,12 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+    <!-- Vendor JS Files -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
 
 <script>
   const swiper = new Swiper(".gallerySwiper", {
