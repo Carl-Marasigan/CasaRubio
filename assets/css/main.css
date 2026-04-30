@@ -181,7 +181,7 @@ h6 {
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
-  background: #059652;
+  background: #084fe8;
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -277,8 +277,11 @@ h6 {
 }
 
 .header .branding {
-  min-height: 60px;
   padding: 10px 0;
+}
+
+.header .container {
+  align-items: center;
 }
 
 .header .logo {
@@ -300,6 +303,7 @@ h6 {
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -1554,7 +1558,7 @@ section,
 
 /* BOOK BUTTON */
 .rooms .btn-book {
-  background: linear-gradient(135deg, var(--accent), #e6c07b);
+  background: var(--accent);
   color: #fff;
   padding: 10px 22px;
   border-radius: 50px;
@@ -2229,9 +2233,7 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+
 
 
 
@@ -2564,3 +2566,228 @@ section,
 }
 
 
+/* GALLERY POOL */
+/* Pool Section Styles Only */
+.pool {
+  background-color: #f8faf9;
+}
+
+/* Headings */
+.pool h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.pool .lead {
+  font-size: 1rem;
+  color: #556b7c;
+  margin-bottom: 1.5rem;
+}
+
+/* Features */
+.pool .features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.pool .features-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #495057;
+}
+
+/* Stats */
+.pool .stats h3 {
+  font-size: 1.5rem;
+  color: #00b4d8;
+  margin-bottom: 0;
+}
+
+.pool .stats p {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* ================= IMAGE SECTION ================= */
+
+/* Wrapper */
+.pool .img-wrapper {
+  position: relative;
+  max-width: 500px;
+  overflow: visible;
+}
+
+/* Main Image */
+.pool .main-img {
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+
+/* Overlay Image */
+.pool .overlay-img {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 210px;
+  height: 200px;
+  /* object-fit: cover; */
+  border: 4px solid #fff;
+  border-radius: 12px;
+  z-index: 2;
+  transition: all 0.5s ease;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Glow background */
+/* .pool .img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 180, 216, 0.15);
+  border-radius: 20px;
+  z-index: 0;
+  transition: 0.5s ease;
+} */
+
+/* Hover Effects */
+.pool .img-wrapper:hover .main-img {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.pool .img-wrapper:hover .overlay-img {
+  transform: translate(-10px, 10px) scale(1.05);
+}
+
+.pool .img-wrapper:hover::before {
+  transform: translate(10px, 10px);
+  background: rgba(0, 180, 216, 0.25);
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Badge */
+.pool .special-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #00b4d8;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  z-index: 3;
+}
+
+.pool .special-badge strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+/* ================= BUTTONS ================= */
+
+/* Fix: missing # in your original */
+.pool .btn-primary {
+  background: #428bca;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 30px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.pool .btn-primary:hover {
+  background-color: #2f6fa5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.pool .btn-outline-primary {
+  color: #428bca;
+  border: 1px solid #428bca;
+  border-radius: 50px;
+  padding: 10px 30px;
+  transition: all 0.3s ease;
+}
+
+.pool .btn-outline-primary:hover {
+  background-color: #428bca;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ================= LEFT CONTENT ================= */
+
+.pool .pool-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.pool .pool-lead {
+  color: #5f6f7c;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Features (icon style) */
+.pool .pool-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.pool .pool-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.pool .pool-features i {
+  color: #428bca;
+  font-size: 1.1rem;
+}
+
+/* Highlight Box */
+.pool .pool-highlight {
+  background: #eef7f6;
+  border-left: 4px solid #428bca;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.pool .pool-highlight strong {
+  display: block;
+  font-size: 1rem;
+  color: #428bca;
+}
+
+.pool .pool-highlight span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Buttons spacing */
+.pool .btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+}
