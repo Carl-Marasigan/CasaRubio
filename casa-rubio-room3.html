@@ -273,7 +273,7 @@
 </div>
   </div>
 
-  <!-- COPYRIGHT -->
+ <!-- COPYRIGHT -->
   <div class="container copyright text-center mt-4">
     <p>© <span>Copyright</span> <strong class="px-1 sitename">Casa Rubio</strong> <span>All Rights Reserved</span></p>
     <div class="credits">
@@ -299,120 +299,140 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
+   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+    <script>
+        function openLightbox(src) {
+        const lightbox = document.getElementById("lightbox");
+        const img = document.getElementById("lightbox-img");
+
+        img.src = src;
+        lightbox.style.display = "flex"; // ✅ IMPORTANT
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+      }
+  </script>
+
+
 
   <!-- calendar JS -->
   <script src="./assets/js/index.global.min.js"></script>
   <!-- SweetAlert (for popup) -->
   <script src="./assets/js/sweetalert2@11.js"></script>
+  <!-- SweetAlert2 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 
-
-  <script>
-    function openLightbox(src) {
-    const lightbox = document.getElementById("lightbox");
-    const img = document.getElementById("lightbox-img");
-
-    img.src = src;
-    lightbox.style.display = "flex";
-    }
-
-    function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-    }
-  </script>
-
-
+<!-- Calendar Script -->
 <script>
-      document.addEventListener('DOMContentLoaded', async function () {
+document.addEventListener('DOMContentLoaded', async function () {
 
-        let bookings = [];
+  let bookings = [];
 
-        // ✅ FETCH BOOKINGS
-        try {
-          const res = await fetch("./admin/get-bookings.php");
-          bookings = await res.json();
-          console.log("Bookings:", bookings);
-        } catch (e) {
-          console.warn("Failed to load bookings", e);
-        }
+  // ✅ FETCH BOOKINGS
+  try {
+    const res = await fetch("./admin/get-bookings.php");
+    bookings = await res.json();
+    console.log("Bookings:", bookings);
+  } catch (e) {
+    console.warn("Failed to load bookings", e);
+  }
 
-        const events = bookings.map(b => {
-          // Normalize stay_type
-          let stayType = b.stay_type.toLowerCase().replace(/\s/g, '');
-          let color = '#e74c3c';
-          let displayTitle = "Booked";
+  const events = bookings.map(b => {
+    let stayType = b.stay_type.toLowerCase().replace(/\s/g, '');
+    let color = '#e74c3c';
+    let displayTitle = "Booked";
 
-          // Set color and title
-          switch(stayType) {
-            case 'overnight':
-              color = '#3498db';
-              displayTitle = "Booked";
-              break;
-            case 'daytour':
-              color = '#f1c40f';
-              displayTitle = "Booked";
-              break;
-            case '22hour':
-              color = '#e61717';
-              displayTitle = "Booked";
-              break;
-          }
+    switch(stayType) {
+      case 'overnight':
+        color = '#3498db';
+        break;
+      case 'daytour':
+        color = '#f1c40f';
+        break;
+      case '22hour':
+        color = '#e61717';
+        break;
+    }
 
-          let startDate = b.arrival_date;
-          let endDate = b.departure_date;
+    let startDate = b.arrival_date;
+    let endDate = b.departure_date;
 
-          // ✅ Extend Overnight or 22-Hour if crossing midnight
-          if (stayType === "22hour" || stayType === "overnight") {
-            if (b.departure_time < b.arrival_time) {
-              let temp = new Date(endDate);
-              temp.setDate(temp.getDate() + 1);
-              endDate = temp.toISOString().split("T")[0];
-            }
-          }
+    // ✅ Fix overnight crossing midnight
+    if (stayType === "22hour" || stayType === "overnight") {
+      if (b.departure_time < b.arrival_time) {
+        let temp = new Date(endDate);
+        temp.setDate(temp.getDate() + 1);
+        endDate = temp.toISOString().split("T")[0];
+      }
+    }
 
-          return {
-            title: displayTitle,
-            start: startDate,
-            end: endDate,
-            allDay: true,
-            backgroundColor: color,
-            borderColor: color,
-            textColor: '#fff',
-            overlap: false
-          };
-        });
+    return {
+      title: displayTitle,
+      start: startDate,
+      end: endDate,
+      allDay: true,
+      backgroundColor: color,
+      borderColor: color,
+      textColor: '#fff',
+      overlap: false
+    };
+  });
 
-        const calendarEl = document.getElementById('calendar');
-        if (!calendarEl) return;
+  const calendarEl = document.getElementById('calendar');
+  if (!calendarEl) return;
 
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
-          height: 'auto',
-          selectable: true,
-          selectOverlap: false,
-          events: events,
-          validRange: { start: new Date().toISOString().split("T")[0] },
+  const calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth',
+    height: 'auto',
 
-          // Popup on select
-          select: function(info) {
-            Swal.fire({
-              icon: 'info',
-              title: 'Selected Dates',
-              html: `<b>Check-in:</b> ${info.startStr}<br><b>Check-out:</b> ${info.endStr}`,
-              confirmButtonText: 'Book Now'
-            }).then((result) => {
-              if (result.isConfirmed) window.open("casa-rubio-booking.html", "_blank");
-            });
-          }
-        });
+    selectable: true,
+    selectOverlap: false,
+    longPressDelay: 0,       // ✅ Mobile fix
+    selectMirror: true,      // ✅ Mobile UX
 
-        calendar.render();
+    events: events,
+    validRange: { start: new Date().toISOString().split("T")[0] },
 
-      });
-      </script>
+    // ✅ DESKTOP (drag selection)
+    select: function(info) {
+      showBookingAlert(info.startStr, info.endStr);
+    },
 
-  
+    // ✅ MOBILE (tap)
+    dateClick: function(info) {
+      showBookingAlert(info.dateStr, info.dateStr);
+    }
+
+  });
+
+  calendar.render();
+
+  // ✅ Reusable SweetAlert function
+  function showBookingAlert(start, end) {
+    if (typeof Swal === "undefined") {
+      alert(`Check-in: ${start}\nCheck-out: ${end}`);
+      return;
+    }
+
+    Swal.fire({
+      icon: 'info',
+      title: 'Selected Dates',
+      html: `<b>Check-in:</b> ${start}<br><b>Check-out:</b> ${end}`,
+      confirmButtonText: 'Book Now',
+      showCancelButton: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // ✅ Mobile-safe redirect
+        window.location.href = "casa-rubio-booking.html";
+      }
+    });
+  }
+
+});
+</script>
 
 
 </body>
