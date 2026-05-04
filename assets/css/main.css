@@ -1148,7 +1148,7 @@ section,
 
 /* Main image (right aligned feel) */
 .about .main-img {
-  width: 90%;
+  width: 100%;
   display: block;
   margin-left: 50px; /* Adds space between the image and text */
   border-radius: 1rem;
@@ -1164,8 +1164,8 @@ section,
 .about .overlay-img {
   position: absolute;
   bottom: -25px;
-  left: -25px;
-  width: 60%;
+  left: -5px;
+  width: 250px;
   border-radius: 1rem;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
   transition: transform 0.4s ease;
