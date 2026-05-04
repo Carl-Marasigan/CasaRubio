@@ -363,6 +363,29 @@ document.addEventListener('DOMContentLoaded', async function () {
     console.warn("Failed to load bookings", e);
   }
 
+  // ✅ Count bookings for each day
+  const bookingCount = {};
+
+  bookings.forEach(b => {
+    let stayType = b.stay_type.toLowerCase().replace(/\s/g, '');
+    let startDate = b.arrival_date;
+    let endDate = b.departure_date;
+
+    // ✅ Count bookings for each day
+    let currentDate = new Date(startDate);
+    let endDateObj = new Date(endDate);
+    
+    // Loop through the days of the booking and increment the count
+    while (currentDate <= endDateObj) {
+      const dateStr = currentDate.toISOString().split('T')[0];  // YYYY-MM-DD format
+      if (!bookingCount[dateStr]) {
+        bookingCount[dateStr] = 0;
+      }
+      bookingCount[dateStr]++;
+      currentDate.setDate(currentDate.getDate() + 1); // Move to the next day
+    }
+  });
+
   const events = bookings.map(b => {
     let stayType = b.stay_type.toLowerCase().replace(/\s/g, '');
     let color = '#e74c3c';
@@ -419,14 +442,32 @@ document.addEventListener('DOMContentLoaded', async function () {
     events: events,
     validRange: { start: new Date().toISOString().split("T")[0] },
 
-    // ✅ DESKTOP (drag selection)
+    // ✅ Block dates if all 3 accommodations are booked
     select: function(info) {
-      showBookingAlert(info.startStr, info.endStr);
+      const selectedDate = info.startStr.split('T')[0]; // YYYY-MM-DD format
+      if (bookingCount[selectedDate] >= 3) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Date Locked',
+          text: `All accommodations are already booked for this day.`,
+        });
+      } else {
+        showBookingAlert(info.startStr, info.endStr);
+      }
     },
 
     // ✅ MOBILE (tap)
     dateClick: function(info) {
-      showBookingAlert(info.dateStr, info.dateStr);
+      const selectedDate = info.dateStr.split('T')[0];
+      if (bookingCount[selectedDate] >= 3) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Date Locked',
+          text: `All accommodations are already booked for this day.`,
+        });
+      } else {
+        showBookingAlert(info.dateStr, info.dateStr);
+      }
     }
 
   });
