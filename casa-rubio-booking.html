@@ -126,7 +126,7 @@
             <input type="text" name="guests" id="guests" value="1" readonly>
             <button type="button" onclick="changeGuests(1)">+</button>
           </div>
-          <small class="hint">Max capacity: 20 guests</small>
+          <!-- <small class="hint">Max capacity: 20 guests</small> -->
         </div>
       </div>
 
@@ -393,7 +393,7 @@
 function changeGuests(value) {
   let input = document.getElementById("guests");
   let current = parseInt(input.value);
-  let max = 20;
+  let max = 100;
 
   if (current + value >= 1 && current + value <= max) {
     input.value = current + value;
