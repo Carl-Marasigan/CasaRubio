@@ -102,12 +102,12 @@
 
 <section class="booking-section">
   <div class="booking-container">
+
     <!-- LEFT: FORM -->
     <form class="booking-form" action="forms/booking.php" method="POST">
 
       <h3>Booking Details</h3>
 
-      <!-- ✅ 3-COLUMN LAYOUT -->
       <div class="form-row-3">
         <div class="form-group">
           <label for="arrival_date">Arrival Date</label>
@@ -126,17 +126,21 @@
             <input type="text" name="guests" id="guests" value="1" readonly>
             <button type="button" onclick="changeGuests(1)">+</button>
           </div>
-          <!-- <small class="hint">Max capacity: 20 guests</small> -->
         </div>
       </div>
 
-      <!-- Stay Type Selection -->
-      <div class="form-group">
+    <div class="form-group">
         <label for="stay_type">Stay Type</label>
+
         <select name="stay_type" id="stay_type" onchange="toggleStayTimes(this.value)" required>
+
+          <!-- DEFAULT PLACEHOLDER -->
+          <option value="" disabled selected>Select Stay Type</option>
+
           <option value="overnight">Overnight Stay</option>
           <option value="daytour">Day Tour</option>
           <option value="22hour">22-Hour Stay</option>
+
         </select>
       </div>
 
@@ -153,7 +157,7 @@
       </div>
 
       <label for="requirements">Additional Requirements</label>
-      <textarea name="requirements" id="requirements" placeholder="Event type, time (day/night), special requests..."></textarea>
+      <textarea name="requirements" id="requirements"></textarea>
 
       <h4>Guest Information</h4>
 
@@ -167,10 +171,20 @@
           <label for="email">Email Address</label>
           <input type="email" name="email" id="email" required>
         </div>
+
         <div class="form-group">
           <label for="contact">Contact Number</label>
           <input type="text" name="contact" id="contact" required>
         </div>
+      </div>
+
+      <!-- ✅ TERMS (FIXED STRUCTURE) -->
+      <div class="terms-container">
+        <label class="terms-label">
+          <input type="checkbox" id="termsCheck" required>
+          I agree to the
+          <a href="#" onclick="openTerms(event)">Terms and Conditions</a>
+        </label>
       </div>
 
       <button type="submit" class="submit-btn">Submit Reservation Request</button>
@@ -201,6 +215,30 @@
 
   </div>
 </section>
+
+<!-- ✅ MODAL -->
+<div id="termsModal">
+  <div class="terms-content">
+
+    <span class="terms-close" onclick="closeTerms()">&times;</span>
+
+    <h4>Terms and Conditions</h4>
+
+    <div id="termsBox" class="terms-box">
+      <p>
+        • Booking is subject to availability and confirmation.<br><br>
+        • Full or partial payment is required.<br><br>
+        • Cancellation must be 48 hours prior.<br><br>
+        • No-shows may forfeit payment.<br><br>
+        • Guests are responsible for damages.<br><br>
+        • Resort rules must be followed.
+      </p>
+    </div>
+
+    <button class="terms-btn" onclick="closeTerms()">Close</button>
+
+  </div>
+</div>
 
 </main>
 
@@ -403,33 +441,50 @@ function changeGuests(value) {
 
 
 <!-- arrival and departure -->
-
 <script>
 // Toggle available times based on stay type
 function toggleStayTimes(stayType) {
+
   let arrivalTimeField = document.querySelector("input[name='arrival_time']");
   let departureTimeField = document.querySelector("input[name='departure_time']");
 
-  // Clear the time fields when changing stay type
+  // Clear first
   arrivalTimeField.value = "";
   departureTimeField.value = "";
 
+  // Remove previous mins
+  arrivalTimeField.removeAttribute("min");
+  departureTimeField.removeAttribute("min");
+
+  // If no selection yet
+  if (!stayType) {
+    return;
+  }
+
   if (stayType === "overnight") {
-    // Set overnight times: 7 PM - 6 AM
+
+    // Overnight: 7 PM - 6 AM
     arrivalTimeField.value = "19:00";
     departureTimeField.value = "06:00";
+
     arrivalTimeField.setAttribute("min", "19:00");
     departureTimeField.setAttribute("min", "06:00");
+
   } else if (stayType === "daytour") {
-    // Set day tour times: 8 AM - 5 PM
+
+    // Day Tour: 8 AM - 5 PM
     arrivalTimeField.value = "08:00";
     departureTimeField.value = "17:00";
+
     arrivalTimeField.setAttribute("min", "08:00");
     departureTimeField.setAttribute("min", "17:00");
+
   } else if (stayType === "22hour") {
-    // 22-hour stay times: 7 PM - 5 PM or 8 AM - 6 AM
-    arrivalTimeField.value = "19:00"; // Default value, could be dynamically changed by user
-    departureTimeField.value = "17:00"; // Default value, could be dynamically changed by user
+
+    // 22 Hour Stay
+    arrivalTimeField.value = "19:00";
+    departureTimeField.value = "17:00";
+
     arrivalTimeField.setAttribute("min", "19:00");
     departureTimeField.setAttribute("min", "17:00");
   }
@@ -437,6 +492,29 @@ function toggleStayTimes(stayType) {
 </script>
 
 
+<!-- terms and agreement -->
+
+<script>
+function openTerms(e) {
+  e.preventDefault();
+  document.getElementById("termsModal").classList.add("show");
+}
+
+function closeTerms() {
+  document.getElementById("termsModal").classList.remove("show");
+}
+
+// FIX: wait for DOM before attaching scroll
+document.addEventListener("DOMContentLoaded", function () {
+  const termsBox = document.getElementById("termsBox");
+
+  termsBox.addEventListener("scroll", function () {
+    if (termsBox.scrollTop + termsBox.clientHeight >= termsBox.scrollHeight) {
+      document.getElementById("terms").disabled = false;
+    }
+  });
+});
+</script>
 
 
 
