@@ -977,14 +977,18 @@ section,
   }
 }
 
-/* Subtitle */
 .hero p {
   animation: fadeInDown 1s both 0.2s;
-
-  /* ✅ readability fix */
   color: #f1f1f1;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
   line-height: 1.5;
+  font-size: 20px;
+
+  text-shadow: 
+    -1px -1px 0 #000000b6,
+     1px -1px 0 #000000b6,
+    -1px  1px 0 #000000b6,
+     1px  1px 0 #000000b6,
+     0 2px 10px rgba(0, 0, 0, 0.638);
 }
 
 @media (min-width: 1024px) {
